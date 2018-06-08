@@ -11,6 +11,16 @@ import App from './App.vue'
 // 引用路由配置文件
 import routes from './config/routes'
 
+// 引用axios文件
+import axios from './config/axios'
+
+// 引入elementUI
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+// 设置element ui插件
+Vue.use(ElementUI)
+
 // vue设置插件路由vue-router
 Vue.use(VueRouter)
 
@@ -18,6 +28,9 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes
 })
+
+//  axios设置为全局属性
+Vue.prototype.axios = axios
 
 Vue.config.productionTip = false
 
