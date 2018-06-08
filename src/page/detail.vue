@@ -1,12 +1,12 @@
 <template>
-    <div class="container-detail">
-        这是详情页面
-    </div>
+  <div class="container-detail">
+    这是详情页面
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data ( ) {
     return {}
   },
   methods: {},

@@ -1,29 +1,21 @@
 <template>
   <div>
-      员工信息组件
+    员工信息组件
   </div>
 </template>
 
 <script>
 export default {
   name: 'StaffInfo',
-  props: {
-
-  },
+  props: {},
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods: {
-
-  },
-  components: {
-
-  }
+  methods: {},
+  components: {}
 }
 </script>
 
 <style>
-    @import url('../style/components/StaffInfo.css');
+@import url('../style/components/StaffInfo.css');
 </style>

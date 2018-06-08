@@ -1,12 +1,12 @@
 <template>
-    <div class="container-login">
-        这是登陆页面
-    </div>
+  <div class="container-login">
+    这是登陆页面
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {}
   },
   methods: {},
