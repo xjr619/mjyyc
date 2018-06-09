@@ -1,0 +1,9 @@
+.settle-search-box{
+    text-align:right
+}
+.settle-search-date{
+    width:120px;float:left
+}
+.settle-search-input{
+    width:calc(100% - 120px);float:left
+}
