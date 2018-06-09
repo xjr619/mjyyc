@@ -70,6 +70,17 @@ export default {
     }
   },
   computed:{},
+  watch: {
+    '$route':function(val, oldVal){
+      if(val.query.queryString){
+        this.$set(this.tableData,this.tableData.length,{
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          })
+      }
+    }
+  },
   created() {
     
   },
