@@ -2,7 +2,6 @@
 import home from '../page/home'
 import login from '../page/login'
 import detail from '../page/detail'
-import RegitsterInGoods from '../components/RegitsterInGoods'
 import OutGoodsReceipt from '../components/OutGoodsReceipt'
 import CustomerInfo from '../components/CustomerInfo'
 import SettleReceipt from '../components/SettleReceipt'
@@ -18,10 +17,6 @@ export default [
       {
         path: '',
         component: InGoodsList
-      },
-      {
-        path: '/ingoods',
-        component: RegitsterInGoods
       },
       {
         path: '/outgoods',
