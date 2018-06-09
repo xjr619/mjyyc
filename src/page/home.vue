@@ -4,7 +4,7 @@
     <el-row>
       <el-col :span="16">
         <div class="grid-content">
-          <el-button type="primary" @click="dialogFormVisible = true" plain>登记入货</el-button>
+          <el-button type="primary" @click="showDialog" plain>登记入货</el-button>
           <router-link to="/outgoods">
             <el-button type="success" plain>出货打单</el-button>
           </router-link>
@@ -47,7 +47,12 @@ export default {
       dialogFormVisible: false
     }
   },
-  methods: {},
+  methods: {
+    showDialog(){
+      this.$router.push({ path: '/'})
+      this.dialogFormVisible = true
+    }
+  },
   components: {
     Search: Search,
     RegitsterInGoods: RegitsterInGoods
