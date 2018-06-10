@@ -32,7 +32,7 @@ export default {
           resource: '',
           desc: ''
         },
-        formLabelWidth: '120px'
+        formLabelWidth: '100px'
     }
   },
   methods: {

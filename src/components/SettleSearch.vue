@@ -2,7 +2,7 @@
   <div class="settle-search-box">
     <div class="settle-search-date"><el-date-picker v-model="selectDate" type="month" placeholder="打单日期"></el-date-picker></div>
     <div class="settle-search-input">
-      <el-autocomplete v-model="selectPatient" :fetch-suggestions="queryPatients" placeholder="患者姓名" @select="handleSelectPatient">
+      <el-autocomplete v-model="selectPatient" prefix-icon="el-icon-service" :clearable="true" :fetch-suggestions="queryPatients" placeholder="患者姓名" @select="handleSelectPatient">
         <el-button slot="append" icon="el-icon-search">搜索</el-button>
       </el-autocomplete>
     </div>

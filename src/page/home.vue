@@ -1,24 +1,24 @@
 <template>
   <div class="container-home">
-    <div class="home-title">美嘉誉义齿</div>
+    <div class="home-title">美嘉誉义齿打单系统</div>
     <div class="home-menu">
       <el-row>
-        <el-col :span="15">
+        <el-col :span="16">
           <div class="grid-content">
-            <el-button  @click="showInGoodsDialog" type="info" plain>登记入货</el-button>
+            <el-button  @click="showInGoodsDialog" type="info" icon="el-icon-sold-out" plain>登记入货</el-button>
             <router-link to="/outgoods">
-              <el-button  @click="showSearch"  type="info" plain>出货打单</el-button>
+              <el-button  @click="showSearch"  type="info" icon="el-icon-printer" plain>出货打单</el-button>
             </router-link>
-            <el-button  @click="showSettle" type="info" plain>结算打单</el-button>
+            <el-button  @click="showSettle" type="info"  icon="el-icon-printer"  plain>结算打单</el-button>
             <router-link to="/customer">
-              <el-button  @click="showSearch"  type="info" plain>客户信息</el-button>
+              <el-button  @click="showSearch"  type="info" icon="el-icon-tickets" plain>客户信息</el-button>
             </router-link>
             <router-link to="/staff">
-              <el-button  @click="showSearch"  type="info" plain>员工信息</el-button>
+              <el-button  @click="showSearch"  type="info" icon="el-icon-document" plain>员工信息</el-button>
             </router-link>
           </div>
         </el-col>
-        <el-col :span="9">
+        <el-col :span="8">
           <div class="grid-content">
             <search v-show="isSearch" :queryString.sync="queryString" @search-list="searchForList"></search>
             <settle-search  v-show="!isSearch"></settle-search>
@@ -62,7 +62,6 @@ export default {
   },
   methods: {
     searchForList(queryObj){
-      
        this.$router.push({ path: queryObj.path,query: {queryString:queryObj.query}})
     },
     showInGoodsDialog(activeIndex) {

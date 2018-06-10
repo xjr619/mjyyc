@@ -2,11 +2,11 @@
     width: 100%;
 }
 .component-box-list{
-    width: calc(100% - 120px);
+    width: calc(100% - 140px);
     float: left;
 }
 .component-box-menu{
-    width: 120px;
+    width: 140px;
     float: right;
     text-align: right
 }

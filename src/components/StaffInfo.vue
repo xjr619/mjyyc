@@ -12,19 +12,16 @@
     </div>
     <div class="component-box-menu">
       <div class="component-box-btn-box">
-        <el-button type="info" @click="showAddDialog" plain>新增员工</el-button>
+        <el-button type="info" @click="showAddDialog"  size="small" icon="el-icon-plus" plain>新增员工</el-button>
       </div>
       <div class="component-box-btn-box">
-        <el-button type="info" plain>编辑员工</el-button>
+        <el-button type="info" icon="el-icon-edit"  size="small" plain>编辑员工</el-button>
       </div>
       <div class="component-box-btn-box">
-        <el-button type="info" plain>保存员工</el-button>
+        <el-button type="info" icon="el-icon-check"  size="small" plain>保存员工</el-button>
       </div>
       <div class="component-box-btn-box">
-        <el-button type="info" plain>删除员工</el-button>
-      </div>
-      <div class="component-box-btn-box">
-        <el-button type="info" plain>员工权限</el-button>
+        <el-button type="info" icon="el-icon-delete"  size="small" plain>删除员工</el-button>
       </div>
     </div>
     <el-dialog title="新增员工" :visible.sync="dialogFormVisible" :modal="true"  :lock-scroll="true"  :close-on-click-modal="false" :show-close="false">
@@ -77,7 +74,7 @@ export default {
       if(val.query.queryString){
         this.$set(this.tableData,this.tableData.length,{
             date: '2016-05-03',
-            name: '王小虎',
+            name: val.query.queryString,
             address: '上海市普陀区金沙江路 1516 弄'
           })
       }

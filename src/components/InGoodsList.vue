@@ -12,28 +12,39 @@
     </div>
     <div class="component-box-menu">
       <div class="component-box-btn-box">
-        <el-button type="info" plain>编辑单据</el-button>
+        <el-button type="info" @click="showAddDialog"  size="small" icon="el-icon-plus" plain>登记入货</el-button>
       </div>
       <div class="component-box-btn-box">
-        <el-button type="info" plain>保存单据</el-button>
+        <el-button type="info" icon="el-icon-edit"  size="small" plain>编辑单据</el-button>
       </div>
       <div class="component-box-btn-box">
-        <el-button type="info" plain>删除单据</el-button>
+        <el-button type="info" icon="el-icon-check"  size="small" plain>保存单据</el-button>
+      </div>
+      <div class="component-box-btn-box">
+        <el-button type="info" icon="el-icon-delete"  size="small" plain>删除单据</el-button>
       </div>
     </div>
+    <el-dialog title="登记入货" :visible.sync="dialogFormVisible" :modal="true" :lock-scroll="true" :close-on-click-modal="false" :show-close="false">
+      <regitster-in-goods></regitster-in-goods>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
-import AddCustomer from '../components/AddCustomer'
+import RegitsterInGoods from '../components/RegitsterInGoods'
 export default {
-  name: 'CustomerInfo',
+  name: 'InGoodsList',
   props: {},
   components: {
-    AddCustomer: AddCustomer
+    AddCustomer: RegitsterInGoods
   },
   data() {
     return {
+      dialogFormVisible: false,
       tableData: [
         {
           date: '2016-05-02',
@@ -89,22 +100,22 @@ export default {
     }
   },
   watch: {
-    '$route':function(val, oldVal){
-      if(val.query.queryString){
-        this.$set(this.tableData,this.tableData.length,{
-            date: '2016-05-03',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1516 弄'
-          })
+    $route: function(val, oldVal) {
+      if (val.query.queryString) {
+        this.$set(this.tableData, this.tableData.length, {
+          date: '2016-05-03',
+          name: val.query.queryString,
+          address: '上海市普陀区金沙江路 1516 弄'
+        })
       }
     }
   },
-  computed:{},
-  created(){
-    
-  },
+  computed: {},
+  created() {},
   methods: {
-
+    showAddDialog() {
+      this.dialogFormVisible = true
+    }
   },
   components: {}
 }

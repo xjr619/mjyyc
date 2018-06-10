@@ -1,6 +1,9 @@
 .el-select .el-input {
-    width: 118px;
+    width: 120px;
   }
   .input-with-select .el-input-group__prepend {
     background-color: #fff;
+  }
+  .search-btn{
+    width:124px;
   }
