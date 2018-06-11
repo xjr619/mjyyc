@@ -87,8 +87,7 @@ export default {
     showAddDialog() {
       this.dialogFormVisible = true
     }
-  },
-  components: {}
+  }
 }
 </script>
 <style>

@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'RegitsterInGoods',
+  name: 'AddCustomer',
   props: {
 
   },

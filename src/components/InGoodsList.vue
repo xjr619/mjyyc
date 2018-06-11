@@ -40,7 +40,7 @@ export default {
   name: 'InGoodsList',
   props: {},
   components: {
-    AddCustomer: RegitsterInGoods
+    RegitsterInGoods: RegitsterInGoods
   },
   data() {
     return {
@@ -101,6 +101,7 @@ export default {
   },
   watch: {
     $route: function(val, oldVal) {
+      console.log(val)
       if (val.query.queryString) {
         this.$set(this.tableData, this.tableData.length, {
           date: '2016-05-03',
@@ -117,7 +118,6 @@ export default {
       this.dialogFormVisible = true
     }
   },
-  components: {}
 }
 </script>
 
