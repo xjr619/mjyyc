@@ -20,7 +20,7 @@
         </el-col>
         <el-col :span="8">
           <div class="grid-content">
-            <div style="text-align:right">
+            <div class="search-list-box">
               <search v-show="isSearch" :queryString.sync="queryString" @search-list="searchForList"></search>
               <settle-search v-show="!isSearch"></settle-search>
             </div>
